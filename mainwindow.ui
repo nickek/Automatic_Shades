@@ -207,7 +207,7 @@ QPushButton:pressed {
                  <string notr="true">color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="text">
-                 <string>Status: Closed</string>
+                 <string>Status:</string>
                 </property>
                </widget>
               </item>
@@ -268,7 +268,7 @@ QPushButton:pressed {
                     <string notr="true">color: rgb(255, 255, 255);</string>
                    </property>
                    <property name="text">
-                    <string>Status: Closed</string>
+                    <string>Status:</string>
                    </property>
                   </widget>
                  </item>

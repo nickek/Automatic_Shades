@@ -1,6 +1,6 @@
 from mainwindow_ui import Ui_MainWindow as ui
 import sys
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QCoreApplication
 from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel, QStackedWidget, QVBoxLayout, QWidget
 
 
@@ -56,10 +56,14 @@ class MainWindow(QMainWindow):
     def open_shades(self):
         # Function to open shades
         print("Opening shades")
+        self.ui.label_home_status.setText(QCoreApplication.translate("MainWindow", u"Status: Open", None))
+        self.ui.label_control_status.setText(QCoreApplication.translate("MainWindow", u"Status: Open", None))
 
     def close_shades(self):
         # Function to close shades
         print("Closing shades")
+        self.ui.label_home_status.setText(QCoreApplication.translate("MainWindow", u"Status: Close", None))
+        self.ui.label_control_status.setText(QCoreApplication.translate("MainWindow", u"Status: Close", None))
 
     def move_up(self):
         # Function to move shades up
@@ -72,6 +76,7 @@ class MainWindow(QMainWindow):
     def change_temperature(self, value):
         # Function to handle temperature slider changes
         print(f"Temperature slider value changed to: {value}")
+        self.ui.label_home_temperature.setText(QCoreApplication.translate("MainWindow", f"Temperature: {value}", None))
 
     def change_speed(self, value):
         # Function to handle speed slider changes
