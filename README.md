@@ -32,7 +32,7 @@ Follow these steps to set up the Automatic Shades project:
    
 4. Clone the project repository:
    ```bash
-   git clone https://github.com/your-username/automatic-shades.git
+   git clone https://github.com/nickek/Automatic_Shades.git
    
 5. In the project directory create a python virtual environment:
    ```bash
