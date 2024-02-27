@@ -17,10 +17,9 @@ The Automatic Shades project is designed to automate the control of window shade
 ### Bill of Materials
 
 - 1x - **Raspberry Pi 4B**
-- 1x - **Temperature sensor**
-- 1x - **Light sensor**
-- 1x - **Breadboard**
-- 1x - **Resistor for light sensor**
+- 1x - **Digital Thermometer Temperature Sensor: DS18B20**
+- 1x - **Photoresistor: Ky-018**
+- 1x - **Analog to Digital Converter: ADS1115**
 
 ### Installation
 
