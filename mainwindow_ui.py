@@ -1,24 +1,18 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainwindow.ui'
+## Form generated from reading UI file 'mainwindowJivQCk.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.1
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QMainWindow, QPushButton, QSizePolicy, QSlider,
-    QSpacerItem, QStackedWidget, QStatusBar, QVBoxLayout,
-    QWidget)
+from PySide2.QtCore import *
+from PySide2.QtGui import *
+from PySide2.QtWidgets import *
+
+import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -211,7 +205,7 @@ class Ui_MainWindow(object):
         self.pushButton_control_open.setMinimumSize(QSize(150, 0))
         self.pushButton_control_open.setMaximumSize(QSize(16777215, 200))
         font2 = QFont()
-        font2.setFamilies([u"Segoe UI"])
+        font2.setFamily(u"Segoe UI")
         font2.setPointSize(20)
         self.pushButton_control_open.setFont(font2)
         self.pushButton_control_open.setStyleSheet(u"QPushButton {\n"
@@ -272,9 +266,10 @@ class Ui_MainWindow(object):
         self.pushButton_control_up.setMinimumSize(QSize(150, 0))
         self.pushButton_control_up.setMaximumSize(QSize(16777215, 200))
         font3 = QFont()
-        font3.setFamilies([u"Segoe UI Emoji"])
+        font3.setFamily(u"Segoe UI Emoji")
         font3.setPointSize(32)
         font3.setBold(True)
+        font3.setWeight(75)
         self.pushButton_control_up.setFont(font3)
         self.pushButton_control_up.setStyleSheet(u"QPushButton {\n"
 "	color: rgb(255, 255, 255);\n"
@@ -332,6 +327,23 @@ class Ui_MainWindow(object):
         self.frame_control_bottom.setFrameShadow(QFrame.Raised)
         self.verticalLayout_9 = QVBoxLayout(self.frame_control_bottom)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
+        self.auto_man_switch = QCheckBox(self.frame_control_bottom)
+        self.auto_man_switch.setObjectName(u"auto_man_switch")
+        self.auto_man_switch.setStyleSheet(u"QCheckBox::indicator{\n"
+"	width: 50px;\n"
+"	height: 50px;\n"
+"}\n"
+"QCheckBox::indicator:checked{\n"
+"	image: url(:/images/images/on-button.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked{\n"
+"	image: url(:/images/images/off-button.png);\n"
+"}\n"
+"")
+
+        self.verticalLayout_9.addWidget(self.auto_man_switch)
+
 
         self.verticalLayout_7.addWidget(self.frame_control_bottom)
 
@@ -440,98 +452,6 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_8.addWidget(self.frame_settings_temperature)
 
-        self.frame_settings_speed = QFrame(self.frame_settings)
-        self.frame_settings_speed.setObjectName(u"frame_settings_speed")
-        self.frame_settings_speed.setFrameShape(QFrame.StyledPanel)
-        self.frame_settings_speed.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_4 = QHBoxLayout(self.frame_settings_speed)
-        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.horizontalSpacer_settings_speed_1 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_4.addItem(self.horizontalSpacer_settings_speed_1)
-
-        self.label_settings_speed = QLabel(self.frame_settings_speed)
-        self.label_settings_speed.setObjectName(u"label_settings_speed")
-        self.label_settings_speed.setMinimumSize(QSize(200, 0))
-        self.label_settings_speed.setMaximumSize(QSize(200, 143))
-        self.label_settings_speed.setFont(font1)
-        self.label_settings_speed.setStyleSheet(u"color: rgb(255, 255, 255);")
-
-        self.horizontalLayout_4.addWidget(self.label_settings_speed)
-
-        self.horizontalSlider_settings_speed = QSlider(self.frame_settings_speed)
-        self.horizontalSlider_settings_speed.setObjectName(u"horizontalSlider_settings_speed")
-        self.horizontalSlider_settings_speed.setEnabled(True)
-        self.horizontalSlider_settings_speed.setMinimumSize(QSize(300, 50))
-        self.horizontalSlider_settings_speed.setMaximumSize(QSize(450, 16777215))
-        self.horizontalSlider_settings_speed.setStyleSheet(u"QSlider::groove:horizontal {\n"
-"border: 1px solid #bbb;\n"
-"background: white;\n"
-"height: 25px;\n"
-"border-radius: 5px;\n"
-"}\n"
-"\n"
-"QSlider::sub-page:horizontal {\n"
-"background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,\n"
-"    stop: 0 #66e, stop: 1 #bbf);\n"
-"background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,\n"
-"    stop: 0 #bbf, stop: 1 #55f);\n"
-"border: 1px solid #777;\n"
-"height: 25px;\n"
-"border-radius: 5px;\n"
-"}\n"
-"\n"
-"QSlider::add-page:horizontal {\n"
-"background: #fff;\n"
-"border: 1px solid #777;\n"
-"height: 20px;\n"
-"border-radius: 5px;\n"
-"}\n"
-"\n"
-"QSlider::handle:horizontal {\n"
-"background: qlineargradient(x1:0, y1:0, x2:1, y2:1,\n"
-"    stop:0 #eee, stop:1 #ccc);\n"
-"border: 1px solid #777;\n"
-"width: 13px;\n"
-"margin-top: -2px;\n"
-"margin-bottom: -2px;\n"
-"border-radius: 5px;\n"
-"}\n"
-"\n"
-"QSlider::handle:horizontal:hover {\n"
-"background: qlineargradient(x1:0, y1:0, x2:1, y2:1,\n"
-"    stop:0 #fff, stop:1 #ddd);\n"
-"border: 1px solid #444;\n"
-"border-radius: 5px;\n"
-"}\n"
-""
-                        "\n"
-"QSlider::sub-page:horizontal:disabled {\n"
-"background: #bbb;\n"
-"border-color: #999;\n"
-"}\n"
-"\n"
-"QSlider::add-page:horizontal:disabled {\n"
-"background: #eee;\n"
-"border-color: #999;\n"
-"}\n"
-"\n"
-"QSlider::handle:horizontal:disabled {\n"
-"background: #eee;\n"
-"border: 1px solid #aaa;\n"
-"border-radius: 5px;\n"
-"}")
-        self.horizontalSlider_settings_speed.setOrientation(Qt.Horizontal)
-
-        self.horizontalLayout_4.addWidget(self.horizontalSlider_settings_speed)
-
-        self.horizontalSpacer_settings_speed_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_4.addItem(self.horizontalSpacer_settings_speed_2)
-
-
-        self.verticalLayout_8.addWidget(self.frame_settings_speed)
-
 
         self.verticalLayout_5.addWidget(self.frame_settings)
 
@@ -549,7 +469,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -568,7 +488,7 @@ class Ui_MainWindow(object):
         self.pushButton_control_close.setText(QCoreApplication.translate("MainWindow", u"Close", None))
         self.pushButton_control_up.setText(QCoreApplication.translate("MainWindow", u"\u2191", None))
         self.pushButton_control_down.setText(QCoreApplication.translate("MainWindow", u"\u2193", None))
+        self.auto_man_switch.setText(QCoreApplication.translate("MainWindow", u"Manual Controls", None))
         self.label_settings_temperature.setText(QCoreApplication.translate("MainWindow", u"Temperature: ", None))
-        self.label_settings_speed.setText(QCoreApplication.translate("MainWindow", u"Motor Speed:", None))
     # retranslateUi
 
